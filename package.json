@@ -22,5 +22,18 @@
 	},
 	"_moduleAliases": {
 		"Core": "build/src/"
-	}
+	},
+	"version": "1.0.0",
+	"devDependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LeadcodeDev/Discord-ts-core.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/LeadcodeDev/Discord-ts-core/issues"
+	},
+	"homepage": "https://github.com/LeadcodeDev/Discord-ts-core#readme",
+	"description": ""
 }
