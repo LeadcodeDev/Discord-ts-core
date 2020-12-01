@@ -29,7 +29,7 @@
 		"type": "git",
 		"url": "git+https://github.com/LeadcodeDev/Discord-ts-core.git"
 	},
-	"author": "",
+	"author": "Baptiste Parmantier",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/LeadcodeDev/Discord-ts-core/issues"
