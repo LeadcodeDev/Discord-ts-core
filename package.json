@@ -1,6 +1,6 @@
 {
 	"name": "@discord-ts-app/core",
-	"version": "1.0.4",
+	"version": "1.0.14",
 	"scripts": {
 		"dev": "tsc -w",
 		"start": "SET NODE_ENV=development && nodemon ./build/src/index.js",
@@ -21,7 +21,6 @@
 		"prettier": "^2.2.1",
 		"typescript": "^4.1.2"
 	},
-	"types": "dist/index.d.ts",
 	"devDependencies": {},
 	"repository": {
 		"type": "git",

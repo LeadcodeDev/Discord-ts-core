@@ -1,6 +1,6 @@
-import Events from 'Core/api/events'
-import { EventInterface } from 'Core/interfaces'
-import { Event } from 'Core/decorators'
+import Events from '@discord-ts-app/core/build/enums/events'
+import { Event } from '@discord-ts-app/core/build/decorators'
+import { EventInterface } from '@discord-ts-app/core/build/interfaces'
 
 @Event({ type: Events.EXAMPLE })
 export default class ~Example implements EventInterface {
