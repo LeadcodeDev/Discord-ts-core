@@ -1,5 +1,6 @@
 {
 	"name": "@discord-ts-app/core",
+	"version": "1.0.2",
 	"scripts": {
 		"dev": "tsc -w",
 		"start": "SET NODE_ENV=development && nodemon ./build/src/index.js",
@@ -23,7 +24,6 @@
 	"_moduleAliases": {
 		"Core": "build/src/"
 	},
-	"version": "1.0.1",
 	"devDependencies": {},
 	"repository": {
 		"type": "git",
