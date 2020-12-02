@@ -1,6 +1,6 @@
-import Robot from 'Core/Bot'
-import { UseChannels } from 'Core/types'
-import { Logger, State } from 'Core/utils/Logger'
+import Robot from '../Bot'
+import { UseChannels } from '../types'
+import { Logger, State } from '../utils/Logger'
 import { Channel, Message, TextChannel } from 'discord.js'
 
 /**
