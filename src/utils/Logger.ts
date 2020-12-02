@@ -1,6 +1,6 @@
 import chalk from 'chalk'
-import LoggerList from 'Core/enums/logger'
-import Env from 'Core/utils/Env'
+import LoggerList from '../enums/logger'
+import Env from '../utils/Env'
 import moment from 'moment'
 
 class Logger {
