@@ -1,6 +1,6 @@
-import Bot from 'Core/Bot'
-import Lifecycle from 'Core/middlewares/Lifecycle'
-import Hooks from 'Core/enums/hooks'
+import Bot from './Bot'
+import Lifecycle from './middlewares/Lifecycle'
+import Hooks from './enums/hooks'
 
 export default class Ignitor {
 	private bot: typeof Bot

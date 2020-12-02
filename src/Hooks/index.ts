@@ -1,4 +1,4 @@
-import { useClient, useCommands } from 'Core/hooks/UseContext'
-import { useChannel, useChannels, useMessages } from 'Core/hooks/UseDiscord'
+import { useClient, useCommands } from './UseContext'
+import { useChannel, useChannels, useMessages } from './UseDiscord'
 
 export { useChannels, useChannel, useMessages, useClient, useCommands }

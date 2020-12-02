@@ -1,5 +1,5 @@
-import Robot from 'Core/Bot'
-import { CommandType } from 'Core/types'
+import Robot from '../Bot'
+import { CommandType } from '../types'
 import { Client } from 'discord.js'
 
 /**

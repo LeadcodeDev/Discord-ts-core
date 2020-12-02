@@ -1,4 +1,4 @@
-import Hooks from 'Core/enums/hooks'
+import Hooks from '../enums/hooks'
 
 type Context = {
 	lifecycle: Hooks

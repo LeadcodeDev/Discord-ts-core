@@ -1,4 +1,4 @@
-import Events from 'Core/enums/events'
+import Events from '../enums/events'
 
 type Context = {
 	type: Events

@@ -1,7 +1,7 @@
-import CommandInterface from 'Core/interfaces/CommandInterface'
-import CoreCommands from 'Core/interfaces/CoreCommands'
-import EventInterface from 'Core/interfaces/EventInterface'
-import GuardInterface from 'Core/interfaces/GuardInterface'
-import MiddlewareInterface from 'Core/interfaces/MiddlewareInterface'
+import CommandInterface from './CommandInterface'
+import CoreCommands from './CoreCommands'
+import EventInterface from './EventInterface'
+import GuardInterface from './GuardInterface'
+import MiddlewareInterface from './MiddlewareInterface'
 
 export { CommandInterface, EventInterface, MiddlewareInterface, CoreCommands, GuardInterface }

@@ -1,4 +1,4 @@
-import Guard from 'Core/middlewares/Guard'
-import LifeCycleMiddleware from 'Core/middlewares/Lifecycle'
+import Guard from './Guard'
+import LifeCycleMiddleware from './Lifecycle'
 
 export { Guard, LifeCycleMiddleware }
