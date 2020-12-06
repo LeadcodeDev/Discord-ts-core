@@ -1,6 +1,6 @@
 {
 	"name": "@discord-ts-app/core",
-	"version": "1.0.35",
+	"version": "1.1.0",
 	"scripts": {
 		"dev": "tsc -w",
 		"start": "SET NODE_ENV=development && nodemon ./build/src/index.js",
