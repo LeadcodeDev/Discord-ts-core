@@ -7,6 +7,7 @@ class Bot {
 	public commands: Array<CommandType> = []
 	public events: Array<EventInterface> = []
 	public middlewares: Array<MiddlewareInterface> = []
+	public modules: Array<any> = []
 	public client: Client
 
 	constructor() {
@@ -15,6 +16,7 @@ class Bot {
 
 	/**
 	 * Create new command and add this to the bot
+	 * @deprecated Use registerCommands([])
 	 * @param { Command } command
 	 * @returns { bot }
 	 */
@@ -60,6 +62,16 @@ class Bot {
 	 */
 	public registerMiddlewares(middleware: Array<any>): Bot {
 		middleware.forEach((middleware) => this.middlewares.push(new middleware()))
+		return this
+	}
+
+	/**
+	 * Setup middlewares
+	 * @param { Middleware } middleware
+	 * @returns { bot }
+	 */
+	public registerModules(modules: Array<any>): Bot {
+		modules.forEach((module) => this.modules.push(new module()))
 		return this
 	}
 

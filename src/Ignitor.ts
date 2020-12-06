@@ -11,10 +11,11 @@ export default class Ignitor {
 	}
 
 	async run() {
-		const { client, events, middlewares } = this.bot
+		const { client, events, middlewares, modules } = this.bot
 		Lifecycle.emit(Hooks.BEFORE_START)
 		events.forEach(async ({ name, run }: any) => await client.on(name, run))
 		middlewares.forEach(async (middleware: any) => await Lifecycle.on(middleware.lifecycle, (params?: any) => middleware.run(params)))
+		modules.forEach((module: any) => Object.values(Object.getPrototypeOf(new module())).forEach((func: any) => func))
 		Lifecycle.emit(Hooks.AFTER_START)
 	}
 }
