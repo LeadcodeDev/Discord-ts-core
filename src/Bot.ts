@@ -66,8 +66,8 @@ class Bot {
 	}
 
 	/**
-	 * Setup middlewares
-	 * @param { Middleware } middleware
+	 * Setup Modules
+	 * @param { Modules } module
 	 * @returns { bot }
 	 */
 	public registerModules(modules: Array<any>): Bot {
