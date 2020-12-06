@@ -71,7 +71,7 @@ class Bot {
 	 * @returns { bot }
 	 */
 	public registerModules(modules: Array<any>): Bot {
-		modules.forEach((module) => this.modules.push(new module()))
+		modules.forEach((module) => this.modules.push(module))
 		return this
 	}
 
