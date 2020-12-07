@@ -19,7 +19,6 @@ class Guard implements GuardInterface {
 			.filter((command: CommandType) => command.tag === commandName || command.alias?.includes(commandName))
 			.forEach(async (command: CommandType) => {
 				const { roles, name } = command
-				await message.delete()
 				if (roles?.length != 0) {
 					if (this.hasRoles(roles!, sender)) {
 						await command.run(message, args.slice(1))
@@ -32,6 +31,7 @@ class Guard implements GuardInterface {
 					await command.run(message, args.slice(1))
 					await Logger.send(State.INFO, `${author.tag} execute command (${name})`)
 				}
+				await message.delete()
 				Lifecycle.emit(Hooks.COMMAND_RECEIVED, {
 					commandName: name,
 					commandRoles: roles,
