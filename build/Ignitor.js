@@ -68,20 +68,28 @@ var Ignitor = /** @class */ (function () {
         modules.forEach(function (module) {
             Object.values(Object.getPrototypeOf(new module())).forEach(function (func) { return __awaiter(_this, void 0, void 0, function () {
                 var module;
-                var _a;
-                return __generator(this, function (_b) {
-                    module = Object.getOwnPropertyDescriptors(func);
-                    if ((_a = module === null || module === void 0 ? void 0 : module.object) === null || _a === void 0 ? void 0 : _a.value) {
-                        commands.push({
-                            name: func.object.name,
-                            description: func.object.description,
-                            tag: func.object.tag,
-                            alias: func.object.alias || [],
-                            roles: func.object.roles || [],
-                            run: func.object.run,
-                        });
+                var _a, _b;
+                return __generator(this, function (_c) {
+                    switch (_c.label) {
+                        case 0:
+                            module = Object.getOwnPropertyDescriptors(func);
+                            if (((_a = module === null || module === void 0 ? void 0 : module.object) === null || _a === void 0 ? void 0 : _a.value.type) == 'command') {
+                                commands.push({
+                                    name: func.object.name,
+                                    description: func.object.description,
+                                    tag: func.object.tag,
+                                    alias: func.object.alias || [],
+                                    roles: func.object.roles || [],
+                                    run: func.object.run,
+                                });
+                            }
+                            if (!(((_b = module === null || module === void 0 ? void 0 : module.object) === null || _b === void 0 ? void 0 : _b.value.type) == 'middleware')) return [3 /*break*/, 2];
+                            return [4 /*yield*/, Lifecycle_1.default.on(func.object.lifecycle, function (params) { return func.object.run(params); })];
+                        case 1:
+                            _c.sent();
+                            _c.label = 2;
+                        case 2: return [2 /*return*/];
                     }
-                    return [2 /*return*/];
                 });
             }); });
         });

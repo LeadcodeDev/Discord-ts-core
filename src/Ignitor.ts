@@ -19,7 +19,7 @@ export default class Ignitor {
 		modules.forEach((module: any) => {
 			Object.values(Object.getPrototypeOf(new module())).forEach(async (func: any) => {
 				const module = Object.getOwnPropertyDescriptors(func)
-				if (module?.object?.value) {
+				if (module?.object?.value.type == 'command') {
 					commands.push({
 						name: func.object.name,
 						description: func.object.description,
@@ -28,6 +28,9 @@ export default class Ignitor {
 						roles: func.object.roles || [],
 						run: func.object.run,
 					})
+				}
+				if (module?.object?.value.type == 'middleware') {
+					await Lifecycle.on(func.object.lifecycle, (params?: any) => func.object.run(params))
 				}
 			})
 		})

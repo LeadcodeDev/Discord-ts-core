@@ -1,3 +1,4 @@
 import { Event, Events } from './Events';
 import Command from './Commands';
-export { Event, Events, Command };
+import { Middleware, Lifecycle } from './Middlewares';
+export { Event, Events, Command, Middleware, Lifecycle };

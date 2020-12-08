@@ -64,34 +64,33 @@ var Guard = /** @class */ (function () {
                         switch (_a.label) {
                             case 0:
                                 roles = command.roles, name = command.name;
-                                return [4 /*yield*/, message.delete()];
+                                if (!((roles === null || roles === void 0 ? void 0 : roles.length) != 0)) return [3 /*break*/, 7];
+                                if (!this.hasRoles(roles, sender)) return [3 /*break*/, 3];
+                                return [4 /*yield*/, command.run(message, args.slice(1))];
                             case 1:
                                 _a.sent();
-                                if (!((roles === null || roles === void 0 ? void 0 : roles.length) != 0)) return [3 /*break*/, 8];
-                                if (!this.hasRoles(roles, sender)) return [3 /*break*/, 4];
-                                return [4 /*yield*/, command.run(message, args.slice(1))];
+                                return [4 /*yield*/, Logger_1.Logger.send(Logger_1.State.INFO, author.tag + " execute command (" + name + ")")];
                             case 2:
                                 _a.sent();
-                                return [4 /*yield*/, Logger_1.Logger.send(Logger_1.State.INFO, author.tag + " execute command (" + name + ")")];
-                            case 3:
-                                _a.sent();
-                                return [3 /*break*/, 7];
-                            case 4: return [4 /*yield*/, sender.lastMessage.reply("Vous n'avez pas l'autorisation d'excuter cette commande.")];
-                            case 5:
+                                return [3 /*break*/, 6];
+                            case 3: return [4 /*yield*/, sender.lastMessage.reply("Vous n'avez pas l'autorisation d'excuter cette commande.")];
+                            case 4:
                                 _a.sent();
                                 return [4 /*yield*/, Logger_1.Logger.send(Logger_1.State.ERROR, author.tag + " not allowed to execute command (" + command.name + ")")];
-                            case 6:
+                            case 5:
                                 _a.sent();
-                                _a.label = 7;
-                            case 7: return [3 /*break*/, 11];
-                            case 8: return [4 /*yield*/, command.run(message, args.slice(1))];
-                            case 9:
+                                _a.label = 6;
+                            case 6: return [3 /*break*/, 10];
+                            case 7: return [4 /*yield*/, command.run(message, args.slice(1))];
+                            case 8:
                                 _a.sent();
                                 return [4 /*yield*/, Logger_1.Logger.send(Logger_1.State.INFO, author.tag + " execute command (" + name + ")")];
-                            case 10:
+                            case 9:
                                 _a.sent();
-                                _a.label = 11;
+                                _a.label = 10;
+                            case 10: return [4 /*yield*/, message.delete()];
                             case 11:
+                                _a.sent();
                                 Lifecycle_1.default.emit(hooks_1.default.COMMAND_RECEIVED, {
                                     commandName: name,
                                     commandRoles: roles,
