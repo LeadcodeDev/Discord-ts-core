@@ -31,6 +31,7 @@ declare enum Events {
     MESSAGE_UPDATE = "messageUpdate",
     PRESENCE_UPDATE = "presenceUpdate",
     RATE_LIMIT = "rateLimit",
+    RAW = "raw",
     READY = "ready",
     RECONNECTING = "reconnecting",
     ROLE_CREATE = "roleCreate",

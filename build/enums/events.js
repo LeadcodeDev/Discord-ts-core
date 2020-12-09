@@ -34,6 +34,7 @@ var Events;
     Events["MESSAGE_UPDATE"] = "messageUpdate";
     Events["PRESENCE_UPDATE"] = "presenceUpdate";
     Events["RATE_LIMIT"] = "rateLimit";
+    Events["RAW"] = "raw";
     Events["READY"] = "ready";
     Events["RECONNECTING"] = "reconnecting";
     Events["ROLE_CREATE"] = "roleCreate";
