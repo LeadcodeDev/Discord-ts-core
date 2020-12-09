@@ -47,12 +47,20 @@ function Event(_a) {
     var type = _a.type;
     return function (target, propertyKey, descriptor) {
         var _this = this;
-        Bot_1.default.client.on(type, function (ctx) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, target[propertyKey](ctx)];
-                case 1: return [2 /*return*/, _a.sent()];
+        Bot_1.default.client.on(type, function () {
+            var ctx = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                ctx[_i] = arguments[_i];
             }
-        }); }); });
+            return __awaiter(_this, void 0, void 0, function () {
+                var param1, params2, param3, param4, param5;
+                return __generator(this, function (_a) {
+                    param1 = ctx[0], params2 = ctx[1], param3 = ctx[2], param4 = ctx[3], param5 = ctx[4];
+                    target[propertyKey](param1, params2, param3, param4, param5);
+                    return [2 /*return*/];
+                });
+            });
+        });
     };
 }
 exports.Event = Event;
