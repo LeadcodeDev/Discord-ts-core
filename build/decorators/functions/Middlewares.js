@@ -14,9 +14,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Lifecycle = exports.Middleware = void 0;
-var hooks_1 = __importDefault(require("../../enums/hooks"));
-exports.Lifecycle = hooks_1.default;
+exports.Hooks = exports.Middleware = void 0;
+var Hooks_1 = __importDefault(require("../../Enums/Hooks"));
+exports.Hooks = Hooks_1.default;
 function Middleware(ctx) {
     return function (target, propertyKey, descriptor) {
         var args = [];

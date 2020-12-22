@@ -9,4 +9,4 @@ var Logger;
     Logger["SUCCES"] = "Succ\u00E8s";
 })(Logger || (Logger = {}));
 exports.default = Logger;
-//# sourceMappingURL=logger.js.map
+//# sourceMappingURL=Logger.js.map

@@ -1,6 +1,6 @@
 import Bot from './Bot'
-import Lifecycle from './middlewares/Lifecycle'
-import Hooks from './enums/hooks'
+import Lifecycle from './Middlewares/Lifecycle'
+import Hooks from './Enums/Hooks'
 import { command } from 'execa'
 
 export default class Ignitor {

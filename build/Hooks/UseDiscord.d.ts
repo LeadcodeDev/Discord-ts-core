@@ -1,4 +1,4 @@
-import { UseChannels } from '../types';
+import { UseChannels } from '../Types';
 import { Channel, Message, TextChannel } from 'discord.js';
 /**
  *	Recovery of all channels

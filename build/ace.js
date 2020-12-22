@@ -44,7 +44,7 @@ var _a = process.argv, commandName = _a[2], props = _a[3];
 var args = props.split(',');
 if (commandName == 'make:command') {
     if (args[0] != 'undefined') {
-        var templateDir = process.cwd() + '/node_modules/@discord-ts-app/core/src/template/command';
+        var templateDir = process.cwd() + '/node_modules/@discord-ts-app/core/src/Template/Command';
         var indexDir = process.cwd() + '/src/Commands/index.ts';
         var commandDir = process.cwd() + '/src/Commands';
         var imp = Buffer.from("import " + (args[0].charAt(0).toUpperCase() + args[0].slice(1)) + " from 'App/Commands/" + (args[0].charAt(0).toUpperCase() + args[0].slice(1)) + "'\n");
@@ -53,7 +53,7 @@ if (commandName == 'make:command') {
 }
 if (commandName == 'make:event') {
     if (args[0] != 'undefined') {
-        var templateDir = process.cwd() + '/node_modules/@discord-ts-app/core/src/template/event';
+        var templateDir = process.cwd() + '/node_modules/@discord-ts-app/core/src/Template/Event';
         var indexDir = process.cwd() + '/src/Events/index.ts';
         var eventDir = process.cwd() + '/src/Events';
         var imp = Buffer.from("import " + (args[0].charAt(0).toUpperCase() + args[0].slice(1)) + " from 'App/Events" + (args[0].charAt(0).toUpperCase() + args[0].slice(1)) + "'\n");
@@ -62,7 +62,7 @@ if (commandName == 'make:event') {
 }
 if (commandName == 'make:middleware') {
     if (args[0] != 'undefined') {
-        var templateDir = process.cwd() + '/node_modules/@discord-ts-app/core/src/template/middleware';
+        var templateDir = process.cwd() + '/node_modules/@discord-ts-app/core/src/Template/Middleware';
         var indexDir = process.cwd() + '/src/Middlewares/index.ts';
         var eventDir = process.cwd() + '/src/Middlewares';
         var imp = Buffer.from("import " + (args[0].charAt(0).toUpperCase() + args[0].slice(1)) + " from 'App/Middlewares/" + (args[0].charAt(0).toUpperCase() + args[0].slice(1)) + "'\n");

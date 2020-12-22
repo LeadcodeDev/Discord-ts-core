@@ -1,11 +1,13 @@
-import Events from '../../enums/events'
+import Events from '../../Enums/Events'
 
 type Context = {
 	type: Events
 }
 
-export default function Event({ type }: Context) {
+function Event({ type }: Context) {
 	return function (constructor: Function) {
 		constructor.prototype.name = type
 	}
 }
+
+export { Event, Events }

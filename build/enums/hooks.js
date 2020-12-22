@@ -9,4 +9,4 @@ var Hooks;
     Hooks["COMMAND_RECEIVED"] = "commandReceived";
 })(Hooks || (Hooks = {}));
 exports.default = Hooks;
-//# sourceMappingURL=hooks.js.map
+//# sourceMappingURL=Hooks.js.map

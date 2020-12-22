@@ -1,10 +1,10 @@
 import Robot from '../Bot'
-import { Logger, State } from '../utils/Logger'
-import { GuardInterface } from '../interfaces'
-import Lifecycle from '../middlewares/Lifecycle'
+import { Logger, State } from '../Utils/Logger'
+import { GuardInterface } from '../Interfaces'
+import Lifecycle from '../Middlewares/Lifecycle'
 import { CommandType } from '../types'
-import Hooks from '../enums/hooks'
-import Env from '../utils/Env'
+import Hooks from '../Enums/Hooks'
+import Env from '../Utils/Env'
 import { GuildMember, Message } from 'discord.js'
 
 class Guard implements GuardInterface {

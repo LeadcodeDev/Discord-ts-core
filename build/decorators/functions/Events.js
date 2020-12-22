@@ -40,8 +40,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Events = exports.Event = void 0;
-var events_1 = __importDefault(require("../../enums/events"));
-exports.Events = events_1.default;
+var Events_1 = __importDefault(require("../../Enums/Events"));
+exports.Events = Events_1.default;
 var Bot_1 = __importDefault(require("../../Bot"));
 function Event(_a) {
     var type = _a.type;
@@ -53,10 +53,8 @@ function Event(_a) {
                 ctx[_i] = arguments[_i];
             }
             return __awaiter(_this, void 0, void 0, function () {
-                var param1, params2, param3, param4, param5;
                 return __generator(this, function (_a) {
-                    param1 = ctx[0], params2 = ctx[1], param3 = ctx[2], param4 = ctx[3], param5 = ctx[4];
-                    target[propertyKey](param1, params2, param3, param4, param5);
+                    target[propertyKey].apply(target, ctx);
                     return [2 /*return*/];
                 });
             });

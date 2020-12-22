@@ -1,5 +1,5 @@
 import Command from './Commands'
-import Event from './Events'
-import Middleware from './Middlewares'
+import { Event, Events } from './Events'
+import { Middleware, Hooks } from './Middlewares'
 
-export { Event, Command, Middleware }
+export { Event, Events, Command, Middleware, Hooks }

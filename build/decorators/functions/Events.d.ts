@@ -1,4 +1,4 @@
-import Events from '../../enums/events';
+import Events from '../../Enums/Events';
 declare type Context = {
     type: Events;
 };

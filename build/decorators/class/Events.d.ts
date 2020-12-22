@@ -1,6 +1,6 @@
-import Events from '../../enums/events';
+import Events from '../../Enums/Events';
 declare type Context = {
     type: Events;
 };
-export default function Event({ type }: Context): (constructor: Function) => void;
-export {};
+declare function Event({ type }: Context): (constructor: Function) => void;
+export { Event, Events };

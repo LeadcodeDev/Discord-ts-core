@@ -4,7 +4,7 @@ const args = props.split(',')
 
 if (commandName == 'make:command') {
 	if (args[0] != 'undefined') {
-		const templateDir = process.cwd() + '/node_modules/@discord-ts-app/core/src/template/command'
+		const templateDir = process.cwd() + '/node_modules/@discord-ts-app/core/src/Template/Command'
 		const indexDir = process.cwd() + '/src/Commands/index.ts'
 		const commandDir = process.cwd() + '/src/Commands'
 		const imp = Buffer.from(`import ${args[0].charAt(0).toUpperCase() + args[0].slice(1)} from 'App/Commands/${args[0].charAt(0).toUpperCase() + args[0].slice(1)}'\n`)
@@ -14,7 +14,7 @@ if (commandName == 'make:command') {
 
 if (commandName == 'make:event') {
 	if (args[0] != 'undefined') {
-		const templateDir = process.cwd() + '/node_modules/@discord-ts-app/core/src/template/event'
+		const templateDir = process.cwd() + '/node_modules/@discord-ts-app/core/src/Template/Event'
 		const indexDir = process.cwd() + '/src/Events/index.ts'
 		const eventDir = process.cwd() + '/src/Events'
 		const imp = Buffer.from(`import ${args[0].charAt(0).toUpperCase() + args[0].slice(1)} from 'App/Events${args[0].charAt(0).toUpperCase() + args[0].slice(1)}'\n`)
@@ -23,7 +23,7 @@ if (commandName == 'make:event') {
 }
 if (commandName == 'make:middleware') {
 	if (args[0] != 'undefined') {
-		const templateDir = process.cwd() + '/node_modules/@discord-ts-app/core/src/template/middleware'
+		const templateDir = process.cwd() + '/node_modules/@discord-ts-app/core/src/Template/Middleware'
 		const indexDir = process.cwd() + '/src/Middlewares/index.ts'
 		const eventDir = process.cwd() + '/src/Middlewares'
 		const imp = Buffer.from(`import ${args[0].charAt(0).toUpperCase() + args[0].slice(1)} from 'App/Middlewares/${args[0].charAt(0).toUpperCase() + args[0].slice(1)}'\n`)

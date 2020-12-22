@@ -48,4 +48,4 @@ var Events;
     Events["WARN"] = "warn";
 })(Events || (Events = {}));
 exports.default = Events;
-//# sourceMappingURL=events.js.map
+//# sourceMappingURL=Events.js.map

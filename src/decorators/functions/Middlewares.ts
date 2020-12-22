@@ -1,5 +1,4 @@
-import Hooks from '../../enums/hooks'
-import Lifecycle from '../../enums/hooks'
+import Hooks from '../../Enums/Hooks'
 
 type Context = {
 	lifecycle: Hooks
@@ -11,4 +10,4 @@ function Middleware(ctx: Context) {
 	}
 }
 
-export { Middleware, Lifecycle }
+export { Middleware, Hooks }

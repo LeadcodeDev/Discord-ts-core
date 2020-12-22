@@ -41,9 +41,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.State = exports.Logger = void 0;
 var chalk_1 = __importDefault(require("chalk"));
-var logger_1 = __importDefault(require("../enums/logger"));
-exports.State = logger_1.default;
-var Env_1 = __importDefault(require("../utils/Env"));
+var Logger_1 = __importDefault(require("../Enums/Logger"));
+exports.State = Logger_1.default;
+var Env_1 = __importDefault(require("../Utils/Env"));
 var moment_1 = __importDefault(require("moment"));
 var Logger = /** @class */ (function () {
     function Logger() {
@@ -75,19 +75,19 @@ var Logger = /** @class */ (function () {
     Logger.prototype.chooseColors = function (type) {
         var sentence = '';
         switch (type) {
-            case logger_1.default.WARN:
+            case Logger_1.default.WARN:
                 sentence = "" + chalk_1.default.bold.yellow(type);
                 break;
-            case logger_1.default.INFO:
+            case Logger_1.default.INFO:
                 sentence = "" + chalk_1.default.bold.cyan(type);
                 break;
-            case logger_1.default.FATAL:
+            case Logger_1.default.FATAL:
                 sentence = "" + chalk_1.default.bold.rgb(170, 0, 0).bold(type);
                 break;
-            case logger_1.default.ERROR:
+            case Logger_1.default.ERROR:
                 sentence = "" + chalk_1.default.bold.rgb(255, 85, 85)(type);
                 break;
-            case logger_1.default.SUCCES:
+            case Logger_1.default.SUCCES:
                 sentence = "" + chalk_1.default.bold.greenBright(type);
                 break;
         }

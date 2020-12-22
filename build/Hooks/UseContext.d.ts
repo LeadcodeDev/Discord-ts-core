@@ -1,4 +1,4 @@
-import { CommandType } from '../types';
+import { CommandType } from '../Types';
 import { Client } from 'discord.js';
 /**
  *	Get Bot unstance

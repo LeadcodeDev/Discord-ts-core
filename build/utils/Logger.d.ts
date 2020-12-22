@@ -1,4 +1,4 @@
-import LoggerList from '../enums/logger';
+import LoggerList from '../Enums/Logger';
 declare class Logger {
     constructor();
     send(type: LoggerList, message: string, prod?: boolean): Promise<void>;

@@ -1,6 +1,6 @@
 import Ignitor from './Ignitor'
-import { EventInterface, MiddlewareInterface } from './interfaces'
-import { CommandType } from './types'
+import { EventInterface, MiddlewareInterface } from './Interfaces'
+import { CommandType } from './Types'
 import { Client } from 'discord.js'
 
 class Bot {

@@ -40,10 +40,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var Bot_1 = __importDefault(require("../Bot"));
-var Logger_1 = require("../utils/Logger");
-var Lifecycle_1 = __importDefault(require("../middlewares/Lifecycle"));
-var hooks_1 = __importDefault(require("../enums/hooks"));
-var Env_1 = __importDefault(require("../utils/Env"));
+var Logger_1 = require("../Utils/Logger");
+var Lifecycle_1 = __importDefault(require("../Middlewares/Lifecycle"));
+var Hooks_1 = __importDefault(require("../Enums/Hooks"));
+var Env_1 = __importDefault(require("../Utils/Env"));
 var Guard = /** @class */ (function () {
     function Guard() {
     }
@@ -91,7 +91,7 @@ var Guard = /** @class */ (function () {
                             case 10: return [4 /*yield*/, message.delete()];
                             case 11:
                                 _a.sent();
-                                Lifecycle_1.default.emit(hooks_1.default.COMMAND_RECEIVED, {
+                                Lifecycle_1.default.emit(Hooks_1.default.COMMAND_RECEIVED, {
                                     commandName: name,
                                     commandRoles: roles,
                                     sender: author,
@@ -101,7 +101,7 @@ var Guard = /** @class */ (function () {
                         }
                     });
                 }); });
-                Lifecycle_1.default.emit(hooks_1.default.MESSAGE_RECEIVED, { message: message });
+                Lifecycle_1.default.emit(Hooks_1.default.MESSAGE_RECEIVED, { message: message });
                 return [2 /*return*/];
             });
         });

@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.useMessages = exports.useChannel = exports.useChannels = void 0;
 var Bot_1 = __importDefault(require("../Bot"));
-var Logger_1 = require("../utils/Logger");
+var Logger_1 = require("../Utils/Logger");
 var discord_js_1 = require("discord.js");
 /**
  *	Recovery of all channels

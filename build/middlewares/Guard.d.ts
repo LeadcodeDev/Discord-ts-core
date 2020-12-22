@@ -1,4 +1,4 @@
-import { GuardInterface } from '../interfaces';
+import { GuardInterface } from '../Interfaces';
 import { Message } from 'discord.js';
 declare class Guard implements GuardInterface {
     protect(message: Message): Promise<void>;

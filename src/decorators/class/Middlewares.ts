@@ -1,12 +1,14 @@
-import Hooks from '../../enums/hooks'
+import Hooks from '../../Enums/Hooks'
 
 type Context = {
 	lifecycle: Hooks
 }
 
-export default function Middleware({ lifecycle }: Context) {
+function Middleware({ lifecycle }: Context) {
 	return function (constructor: Function) {
 		constructor.prototype.lifecycle = lifecycle
 		constructor.prototype.execute = (params: any) => constructor.prototype.emit(name, params)
 	}
 }
+
+export { Middleware, Hooks }

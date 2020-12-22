@@ -1,5 +1,5 @@
-import { EventInterface, MiddlewareInterface } from './interfaces';
-import { CommandType } from './types';
+import { EventInterface, MiddlewareInterface } from './Interfaces';
+import { CommandType } from './Types';
 import { Client } from 'discord.js';
 declare class Bot {
     commands: Array<CommandType>;

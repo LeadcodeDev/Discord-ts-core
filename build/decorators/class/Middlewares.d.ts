@@ -1,6 +1,6 @@
-import Hooks from '../../enums/hooks';
+import Hooks from '../../Enums/Hooks';
 declare type Context = {
     lifecycle: Hooks;
 };
-export default function Middleware({ lifecycle }: Context): (constructor: Function) => void;
-export {};
+declare function Middleware({ lifecycle }: Context): (constructor: Function) => void;
+export { Middleware, Hooks };

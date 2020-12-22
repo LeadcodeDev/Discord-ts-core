@@ -39,8 +39,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var Lifecycle_1 = __importDefault(require("./middlewares/Lifecycle"));
-var hooks_1 = __importDefault(require("./enums/hooks"));
+var Lifecycle_1 = __importDefault(require("./Middlewares/Lifecycle"));
+var Hooks_1 = __importDefault(require("./Enums/Hooks"));
 var Ignitor = /** @class */ (function () {
     function Ignitor(bot) {
         this.bot = bot;
@@ -49,7 +49,7 @@ var Ignitor = /** @class */ (function () {
     Ignitor.prototype.run = function () {
         var _this = this;
         var _a = this.bot, client = _a.client, events = _a.events, middlewares = _a.middlewares, modules = _a.modules, commands = _a.commands;
-        Lifecycle_1.default.emit(hooks_1.default.BEFORE_START);
+        Lifecycle_1.default.emit(Hooks_1.default.BEFORE_START);
         events.forEach(function (_a) {
             var name = _a.name, run = _a.run;
             return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_b) {
@@ -93,7 +93,7 @@ var Ignitor = /** @class */ (function () {
                 });
             }); });
         });
-        Lifecycle_1.default.emit(hooks_1.default.AFTER_START);
+        Lifecycle_1.default.emit(Hooks_1.default.AFTER_START);
     };
     return Ignitor;
 }());

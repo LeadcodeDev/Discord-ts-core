@@ -1,7 +1,7 @@
 import { Message } from 'discord.js'
-import { CommandInterface } from '@discord-ts-app/core/build/interfaces'
-import { Command } from '@discord-ts-app/core/build/decorators/class'
-import { Roles } from 'App/utils'
+import { CommandInterface } from '@discord-ts-app/core/build/Interfaces'
+import { Command } from '@discord-ts-app/core/build/Decorators/Class'
+import { Roles } from 'App/Utils'
 
 @Command({ name: 'Command example', description: 'Describe your command', tag: '~example', roles: [Roles.EXAMPLE] })
 export default class ~Example implements CommandInterface {
